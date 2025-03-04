@@ -5,6 +5,7 @@ dnf install nodejs -y
 
 cp catalogue.service /etc/systemd/system/catalogue.service
 cp Mongo.repo /etc/yum.repos.d/Mongo.repo
+
 useradd roboshop
 
 mkdir /app
@@ -24,4 +25,3 @@ systemctl restart catalogue
 dnf install mongodb-mongosh -y
 
 mongosh --host localhost </app/db/master-data.js
-
